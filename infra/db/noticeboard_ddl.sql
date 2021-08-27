@@ -1,0 +1,20 @@
+CREATE TABLE MEMBER(
+    id VARCHAR(20) NOT NULL COMMENT "아이디" ,
+    pw VARCHAR(255) NOT NULL COMMENT "비밀번호",
+    name VARCHAR(20) NOT NULL COMMENT "이름",
+    nickname VARCHAR(20)NOT NULL COMMENT "닉네임",
+    email VARCHAR(25) NOT NULL COMMENT "이메일",
+    phone VARCHAR(20) NOT NULL COMMENT "휴대전화",
+    PRIMARY KEY (id),
+    UNIQUE KEY(phone)
+);
+
+
+CREATE TABLE NOTICE (
+    notice_seq BIGINT NOT NULL AUTO_INCREMENT COMMENT "챌린저 공지 번호",
+    title VARCHAR(50) NOT NULL COMMENT "게시판 제목",
+    id VARCHAR(20) NOT NULL COMMENT "아이디",
+    content VARCHAR(255) NOT NULL  COMMENT "내용",
+    PRIMARY KEY (notice_seq),
+    FOREIGN KEY (id) REFERENCES MEMBER (id)
+);
