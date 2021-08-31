@@ -21,7 +21,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("board.noticBoard.controller"))
+                .apis(RequestHandlerSelectors.basePackage("board.noticeBoard.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
