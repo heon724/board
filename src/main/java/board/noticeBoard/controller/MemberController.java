@@ -1,6 +1,7 @@
 package board.noticeBoard.controller;
 
-import board.noticeBoard.dto.member.MemberDto;
+import board.noticeBoard.dto.member.MemberIdDupCheckDto;
+import board.noticeBoard.dto.member.MemberSignUpDto;
 import board.noticeBoard.service.MemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,9 +20,15 @@ public class MemberController {
     @Autowired
     MemberService memberService;
 
-    @ApiOperation(value = "회원가입", response = MemberDto.class)
+    @ApiOperation(value="사용자아이디중복 확인", response= MemberIdDupCheckDto.class)
+    @GetMapping(value="/dupcheck-id/{id}")
+    public MemberIdDupCheckDto memberIdDupCheck(@ApiParam(value="사용자아이디", required=true) @PathVariable("id") String id) {
+        return memberService.memberIdDupCheck(id);
+    }
+
+    @ApiOperation(value = "회원가입", response = MemberSignUpDto.class)
     @PostMapping(value = "/signUp")
-    public ResponseEntity<Integer> memberIdDupCheck(@ApiParam(value = "회원가입정보", required = true) @RequestBody MemberDto member) {
+    public ResponseEntity<Integer> memberIdDupCheck(@ApiParam(value = "회원가입정보", required = true) @RequestBody MemberSignUpDto member) {
         memberService.signUp(member);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

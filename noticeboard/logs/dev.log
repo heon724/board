@@ -1,0 +1,29 @@
+INFO  21-09-02 17:16:16[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 17148 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-02 17:16:16[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-02 17:16:16[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-02 17:16:25[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'JWTTokenComponent' defined in file [C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes\board\noticeBoard\component\JWTTokenComponent.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+ERROR 21-09-02 17:16:25[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in board.noticeBoard.component.JWTTokenComponent required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+INFO  21-09-02 17:35:08[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 15072 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-02 17:35:08[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-02 17:35:08[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-02 17:35:19[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-02 17:35:21[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 15.58 seconds (JVM running for 17.257)
+INFO  21-09-02 17:43:57[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 13688 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-02 17:43:57[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-02 17:43:57[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-02 17:44:09[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-02 17:44:12[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 17.505 seconds (JVM running for 18.83)

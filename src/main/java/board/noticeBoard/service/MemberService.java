@@ -1,8 +1,10 @@
 package board.noticeBoard.service;
 
-import board.noticeBoard.dto.member.MemberDto;
+import board.noticeBoard.dto.member.MemberIdDupCheckDto;
+import board.noticeBoard.dto.member.MemberSignUpDto;
 
 public interface MemberService {
 
-    void signUp(MemberDto member);
+    public void signUp(MemberSignUpDto member);
+    public MemberIdDupCheckDto memberIdDupCheck(String id);
 }
