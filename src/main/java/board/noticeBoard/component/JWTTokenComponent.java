@@ -24,7 +24,7 @@ import java.util.List;
 @Component
 @PropertySource("classpath:config/noticeboard-dev.properties")
 public class JWTTokenComponent {
-    @Value("${jwt.secret}")
+    @Value("${jwt.secret}")  //환경 변수값
     private String secretKey;
 
     // 토큰 유효시간 30분
@@ -46,7 +46,7 @@ public class JWTTokenComponent {
         return Jwts.builder()
                 .setClaims(claims) // 정보 저장
                 .setIssuedAt(now) // 토큰 발행 시간 정보
-                .setExpiration(new Date(now.getTime() + tokenValidTime)) // set Expire Time
+                .setExpiration(new Date(now.getTime() + tokenValidTime)) // 만료일
                 .signWith(SignatureAlgorithm.HS256, secretKey)  // 사용할 암호화 알고리즘과 signature 에 들어갈 secret값 세팅
                 .compact();
     }
@@ -68,7 +68,7 @@ public class JWTTokenComponent {
     }
 
     // 토큰의 유효성 + 만료일자 확인
-    public boolean validateToken(String jwtToken) {
+    public boolean validateToken(String jwtToken) { // "Bearer "값뒤에 정보를 jwtToken에 받아와 확인
         try {
             Jws<Claims> claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(jwtToken);
             return !claims.getBody().getExpiration().before(new Date());
