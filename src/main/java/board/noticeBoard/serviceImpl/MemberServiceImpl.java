@@ -1,10 +1,7 @@
 package board.noticeBoard.serviceImpl;
 
 import board.noticeBoard.component.JWTTokenComponent;
-import board.noticeBoard.dto.member.LoginResponseDto;
-import board.noticeBoard.dto.member.MemberIdDupCheckDto;
-import board.noticeBoard.dto.member.MemberLoginDto;
-import board.noticeBoard.dto.member.MemberSignUpDto;
+import board.noticeBoard.dto.member.*;
 import board.noticeBoard.entity.Member;
 import board.noticeBoard.exception.NoticeBoardException;
 import board.noticeBoard.repository.MemberRepository;
@@ -51,6 +48,7 @@ public class MemberServiceImpl implements MemberService {
                 .build());
     }
 
+
     /**
      * 아이디 중복확인
      *
@@ -72,6 +70,32 @@ public class MemberServiceImpl implements MemberService {
                     .build();
         }
     }
+
+    /**
+     * 아이디 중복확인
+     *
+     * @param phone
+     * @return
+     */
+    @Override
+    public MemberPhoneDupCheckDto memberPhoneDupCheck(String phone) {
+        String phoneDup = memberRepository.findByMemberPhone(phone);
+
+        if(phoneDup==null) {
+            return MemberPhoneDupCheckDto.builder()
+                    .dupYn("N")
+                    .build();
+        }
+        else{
+            return MemberPhoneDupCheckDto.builder()
+                    .dupYn("Y")
+                    .build();
+        }
+
+    }
+
+
+
 
     /**
      * 로그인
@@ -101,5 +125,20 @@ public class MemberServiceImpl implements MemberService {
                         .phone(memberEntity.getPhone())
                         .build())
                 .build());
+    }
+
+    /**
+     * 아이디찾기
+     *
+     * @param name
+     * @param phone
+     * @return
+     */
+
+    @Override
+    public FindIdDto findId(String name, String phone) {
+        return FindIdDto.builder()
+                .id(memberRepository.findByNameAndPhone(name, phone))
+                .build();
     }
 }
