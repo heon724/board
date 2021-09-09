@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @ApiModel("사용자 로그인")
-public class MemberLoginDto {
+public class LoginDto {
     @ApiModelProperty(value="아이디", example="user001")
     private String id;
 

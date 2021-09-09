@@ -46,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 //                .antMatchers("/**").authenticated()
-                .anyRequest().permitAll()
+                .anyRequest().permitAll() // authenticated은 인증받은사람
                 .and()
                 .formLogin().disable()
         ;

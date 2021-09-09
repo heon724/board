@@ -1,0 +1,28 @@
+INFO  21-09-06 16:06:36[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 15604 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-06 16:06:36[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-06 16:06:36[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-06 16:06:45[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-06 16:06:48[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 13.159 seconds (JVM running for 14.506)
+INFO  21-09-06 16:12:38[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 12868 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-06 16:12:38[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-06 16:12:38[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-06 16:12:49[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-06 16:12:50[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 13.873 seconds (JVM running for 15.374)
+INFO  21-09-06 18:43:37[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 11168 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-06 18:43:37[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-06 18:43:37[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-06 18:43:48[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-06 18:43:52[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 16.193 seconds (JVM running for 17.453)
+INFO  21-09-06 18:44:08[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 13836 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-06 18:44:08[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-06 18:44:08[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-06 18:44:19[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-06 18:44:22[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 15.678 seconds (JVM running for 16.883)
+INFO  21-09-06 18:44:57[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 15560 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-06 18:44:57[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-06 18:44:57[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+INFO  21-09-06 18:45:48[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 8320 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-09-06 18:45:48[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-09-06 18:45:48[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-09-06 18:46:00[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-09-06 18:46:03[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 17.458 seconds (JVM running for 18.707)

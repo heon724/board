@@ -11,14 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ApiModel("사용자 회원가입")
-public class MemberSignUpDto {
-    @ApiModelProperty(value="아이디", example="user001")
-    private String id;
-
-    @ApiModelProperty(value="비밀번호", example="1234")
-    private String pw;
-
+@ApiModel("사용자 정보 수정")
+public class UpdateMemberDto {
     @ApiModelProperty(value="이름", example="홍길동")
     private String name;
 

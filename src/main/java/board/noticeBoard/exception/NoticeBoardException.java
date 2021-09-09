@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 @Getter
-public class NoticeBoardException extends NoticeBoradRuntimeException {
+public class NoticeBoardException extends NoticeBoardRuntimeException {
     String msgKey;
     HttpStatus status;
     String[] args;

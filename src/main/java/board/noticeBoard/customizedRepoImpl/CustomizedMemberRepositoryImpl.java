@@ -1,6 +1,7 @@
 package board.noticeBoard.customizedRepoImpl;
 
 import board.noticeBoard.customizedRepo.CustomizedMemberRepository;
+import board.noticeBoard.dto.member.UpdateMemberDto;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
 import static board.noticeBoard.entity.QMember.member;
@@ -36,5 +37,31 @@ public class CustomizedMemberRepositoryImpl implements CustomizedMemberRepositor
                         .and(member.phone.eq(phone)))
                 .fetchFirst();
 
+    }
+
+    @Override
+    public int saveResetPw(String id, String pw) {
+        return (int) jpaQueryFactory.update(member)
+                .set(member.pw, pw)
+                .where(member.id.eq(id))
+                .execute();
+    }
+
+    @Override
+    public int saveMember(UpdateMemberDto updateMember, String id) {
+        return (int) jpaQueryFactory.update(member)
+                .set(member.name, updateMember.getName())
+                .set(member.email, updateMember.getEmail())
+                .set(member.phone, updateMember.getPhone())
+                .set(member.nickname, updateMember.getNickname())
+                .where(member.id.eq(id))
+                .execute();
+    }
+
+    @Override
+    public int deleteMember(String id) {
+        return (int) jpaQueryFactory.delete(member)
+                .where(member.id.eq(id))
+                .execute();
     }
 }
