@@ -156,7 +156,7 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public MemberDto findMember(Authentication authentication) {
-        Member userDetails = memberRepository.findById((String) authentication.getPrincipal()).get();
+        Member userDetails = (Member) authentication.getPrincipal();
 
         return MemberDto.builder()
                 .id(userDetails.getId())
@@ -177,13 +177,12 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int resetPassword(Authentication authentication) {
-        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
+        Member member = (Member) authentication.getPrincipal();
 
         return memberRepository.saveResetPw(member.getId(),
                 passwordEncoder.encode(member.getId().substring(0, 3)
                         + member.getPhone().substring(member.getPhone().length() - 4) + "!"));
     }
-
     /**
      * 내 정보 수정
      *
@@ -194,7 +193,7 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int updateMember(UpdateMemberDto member, Authentication authentication) {
-        Member userDetails = memberRepository.findById((String) authentication.getPrincipal()).get();
+        Member userDetails = (Member) authentication.getPrincipal();
 
         // 사용자 이름
         if (StringUtils.isBlank(member.getName())) {
@@ -248,8 +247,9 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int deleteMember(Authentication authentication) {
-        Member member = memberRepository.findById((String) authentication.getPrincipal()).get();
+        Member member = (Member) authentication.getPrincipal();
 
         return memberRepository.deleteMember(member.getId());
     }
+
 }

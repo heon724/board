@@ -9,4 +9,5 @@ public interface CustomizedMemberRepository {
     int saveResetPw(String id, String pw);
     int saveMember(UpdateMemberDto updateMember, String id);
     int deleteMember(String id);
+
 }

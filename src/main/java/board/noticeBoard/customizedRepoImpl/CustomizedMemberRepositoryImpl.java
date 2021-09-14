@@ -64,4 +64,5 @@ public class CustomizedMemberRepositoryImpl implements CustomizedMemberRepositor
                 .where(member.id.eq(id))
                 .execute();
     }
+
 }

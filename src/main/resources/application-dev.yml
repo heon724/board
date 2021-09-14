@@ -6,18 +6,11 @@ logging:
     root: WARN
     org.springframework.web.reactive.function.client: trace
 
-management:
-  endpoints:
-    enabled-by-default: false
-  endpoint:
-    health:
-      enabled: true
-
 spring:
   application:
     name: noticeboard
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/db명?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/DB명?serverTimezone=UTC
     username: 계정
     password: 암호
 
@@ -42,11 +35,3 @@ noticeboard:
     properties:
       static:
         path: classpath:/config/noticeboard-dev.properties
-
-
-server:
-  error:
-    include-exception: false      # Response 에 Exception 을 표시할지
-    include-message: always       # Response 에 Exception Message 를 표시할지
-    include-stacktrace: on_param  # Response 에 Stack Trace 를 표시할지
-    whitelabel.enabled: true

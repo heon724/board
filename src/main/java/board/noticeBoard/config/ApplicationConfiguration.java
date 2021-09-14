@@ -1,3 +1,4 @@
+
 package board.noticeBoard.config;
 
 import org.springframework.context.MessageSource;
