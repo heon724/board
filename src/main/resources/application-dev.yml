@@ -10,7 +10,7 @@ spring:
   application:
     name: noticeboard
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/DB명?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/db명?serverTimezone=UTC
     username: 계정
     password: 암호
 

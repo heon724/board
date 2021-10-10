@@ -21,4 +21,4 @@ public class CustomUserDetailService implements UserDetailsService {
                 .orElseThrow(() -> new NoticeBoardException(HttpStatus.NOT_FOUND,
                         "error.user.notfound.user.valid.E0001"));
     }
-}
+} 

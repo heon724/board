@@ -1,159 +1,42 @@
-INFO  21-09-14 16:21:56[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 15816 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
-DEBUG 21-09-14 16:21:56[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
-INFO  21-09-14 16:21:56[main] [NoticeBoardApplication:664] - The following profiles are active: dev
-WARN  21-09-14 16:22:06[main] [AnnotationConfigServletWebServerApplicationContext:596] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'JWTTokenComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
-ERROR 21-09-14 16:22:06[main] [SpringApplication:856] - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'JWTTokenComponent': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at board.noticeBoard.NoticeBoardApplication.main(NoticeBoardApplication.java:12)
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
-	... 18 common frames omitted
-INFO  21-09-14 16:24:05[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 1296 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
-DEBUG 21-09-14 16:24:05[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
-INFO  21-09-14 16:24:05[main] [NoticeBoardApplication:664] - The following profiles are active: dev
-WARN  21-09-14 16:24:15[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-INFO  21-09-14 16:24:18[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 14.41 seconds (JVM running for 15.869)
-ERROR 21-09-14 16:25:05[http-nio-8080-exec-4] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"] with root cause
-java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
-	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:254)
-	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:202)
-	at board.noticeBoard.serviceImpl.MemberServiceImpl.login(MemberServiceImpl.java:118)
-	at board.noticeBoard.serviceImpl.MemberServiceImpl$$FastClassBySpringCGLIB$$7155c81a.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at board.noticeBoard.serviceImpl.MemberServiceImpl$$EnhancerBySpringCGLIB$$e2ba4ac1.login(<generated>)
-	at board.noticeBoard.controller.MemberController.login(MemberController.java:41)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at board.noticeBoard.config.JwtAuthenticationFilter.doFilter(JwtAuthenticationFilter.java:39)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-INFO  21-09-14 16:55:50[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 2732 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
-DEBUG 21-09-14 16:55:50[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
-INFO  21-09-14 16:55:50[main] [NoticeBoardApplication:664] - The following profiles are active: dev
-WARN  21-09-14 16:56:04[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-INFO  21-09-14 16:56:08[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 20.656 seconds (JVM running for 21.996)
-INFO  21-09-14 16:59:49[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 9416 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
-DEBUG 21-09-14 16:59:49[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
-INFO  21-09-14 16:59:49[main] [NoticeBoardApplication:664] - The following profiles are active: dev
-WARN  21-09-14 17:00:00[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-INFO  21-09-14 17:00:02[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 15.415 seconds (JVM running for 16.713)
-INFO  21-09-14 17:13:15[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 7160 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
-DEBUG 21-09-14 17:13:15[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
-INFO  21-09-14 17:13:15[main] [NoticeBoardApplication:664] - The following profiles are active: dev
-WARN  21-09-14 17:13:29[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-INFO  21-09-14 17:13:31[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 18.054 seconds (JVM running for 19.764)
+INFO  21-10-10 20:00:37[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 7284 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-10-10 20:00:37[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-10-10 20:00:37[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-10-10 20:00:53[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+WARN  21-10-10 20:00:57[http-nio-8080-exec-1] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+INFO  21-10-10 20:00:58[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 23.127 seconds (JVM running for 24.755)
+WARN  21-10-10 20:01:00[http-nio-8080-exec-1] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,764] milliseconds.
+WARN  21-10-10 20:01:01[http-nio-8080-exec-4] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:06[http-nio-8080-exec-6] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:07[http-nio-8080-exec-7] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:09[http-nio-8080-exec-8] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:10[http-nio-8080-exec-9] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:11[http-nio-8080-exec-10] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:11[http-nio-8080-exec-2] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:01:19[http-nio-8080-exec-4] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:03:34[http-nio-8080-exec-9] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:03:34[http-nio-8080-exec-10] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+INFO  21-10-10 20:04:52[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 7836 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-10-10 20:04:52[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-10-10 20:04:52[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-10-10 20:05:06[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-10-10 20:05:09[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 19.734 seconds (JVM running for 21.415)
+INFO  21-10-10 20:05:34[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 10260 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-10-10 20:05:34[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-10-10 20:05:34[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-10-10 20:05:47[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-10-10 20:05:50[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 18.039 seconds (JVM running for 19.846)
+WARN  21-10-10 20:06:00[http-nio-8080-exec-1] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:06:00[http-nio-8080-exec-2] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:06:01[http-nio-8080-exec-3] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+WARN  21-10-10 20:06:01[http-nio-8080-exec-4] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
+INFO  21-10-10 20:06:41[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 5420 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-10-10 20:06:41[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-10-10 20:06:41[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-10-10 20:06:50[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-10-10 20:06:53[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 13.638 seconds (JVM running for 14.826)
+INFO  21-10-10 20:11:36[main] [NoticeBoardApplication:55] - Starting NoticeBoardApplication using Java 11.0.11 on DESKTOP-98S3M1D with PID 9832 (C:\Users\kdong\noticeBoard\noticeBoard\out\production\classes started by kdong in C:\Users\kdong\noticeBoard\noticeBoard)
+DEBUG 21-10-10 20:11:36[main] [NoticeBoardApplication:56] - Running with Spring Boot v2.4.2, Spring v5.3.3
+INFO  21-10-10 20:11:36[main] [NoticeBoardApplication:664] - The following profiles are active: dev
+WARN  21-10-10 20:11:46[main] [JpaBaseConfiguration$JpaWebConfiguration:221] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-10-10 20:11:49[main] [NoticeBoardApplication:61] - Started NoticeBoardApplication in 14.177 seconds (JVM running for 15.551)
+WARN  21-10-10 20:17:03[http-nio-8080-exec-8] [ResourceBundleMessageSource:220] - ResourceBundle [messages/messages] not found for MessageSource: Can't find bundle for base name messages/messages, locale ko_KR
